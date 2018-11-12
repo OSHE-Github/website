@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Open Source Hardware Enterprise</title>
+
+    <link href="css/combined.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <a>About</a>
+      <a>About</a>
+      <a>About</a>
+      <a>About</a>
+    </nav>
+    <div id="background"></div>
+
+    <container id="page-container">
+      {% block content %} {% endblock %}
+    </container>
+
+    <script type="text/javascript" src="js/combined.js"></script>
+  </body>
+</html>

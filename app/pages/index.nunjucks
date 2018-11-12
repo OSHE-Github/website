@@ -1,0 +1,14 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  <div class="hero">
+    <img src="images/logoBlack.svg" />
+    <div class="pop">
+      A <b>student organization</b> dedicated to the <b>development</b> and <b>availability</b> of open source hardware.
+    </div>
+  </div>
+  <container id="content-container">
+    <h1>About</h1>
+  </container>
+{% endblock %}

@@ -1,0 +1,108 @@
+// Normalize
+@import 'normalize-scss/sass/normalize';
+@include normalize();
+
+// Variables
+@import 'variables-extended';
+
+// General
+html, body {
+  background-color: $yellow;
+  font-family: $family-sans-serif;
+}
+
+// Layout
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+#page-container {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6),
+    ),
+    url('../images/team.jpg');
+  z-index: 0;
+}
+
+// Navbar
+.navbar {
+  background-color: $background-color-light;
+  padding: 1em;
+  z-index: 1;
+}
+
+// Hero
+.hero {
+  height: 40vh;
+  margin: 10vh 0 20vh 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+
+  padding: 7em;
+
+  img {
+    margin-right: 10em;
+  }
+
+  .pop {
+    background-color: $yellow;
+    color: $black;
+    box-shadow: 15px 15px 0 0 white;
+    max-width: 10em;
+    align-self: center;
+    padding: 1em;
+    font-size: 2em;
+    line-height: 1.5;
+
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+// Main container
+#content-container {
+  z-index: 100;
+  width: 85%;
+  height: 100vh;
+  margin: 0 auto;
+  border-radius: 0.5em 0.5em 0 0;
+  background-color: $background-color-light;
+
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    background-color: $yellow;
+    position: relative;
+    margin: 0 auto;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size: 5em;
+  }
+}
+
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+  font-family: $family-sans-serif;
+  font-weight: 700;
+}
