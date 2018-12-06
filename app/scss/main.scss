@@ -5,6 +5,9 @@
 // Variables
 @import 'variables-extended';
 
+// Mixins
+@import 'mixins';
+
 // General
 html, body {
   background-color: $yellow;
@@ -18,6 +21,14 @@ html {
 
 body {
   min-height: 100%;
+  z-index: 0;
+  font-size: calc(1em + ((1vw + 1vh) / 2));
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+  @include for-desktop-down {
+    font-size: 2em;
+  }
 }
 
 #page-container {
@@ -38,40 +49,104 @@ body {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6),
     ),
-    url('../images/team.jpg');
+    url('../images/background.jpg');
+  background-size: cover;
+
   z-index: 0;
 }
 
 // Navbar
-.navbar {
-  background-color: $background-color-light;
-  padding: 1em;
-  z-index: 1;
+#navbar {
+  transition-property: all;
+  transition-duration: 0.3s;
+
+  &.toggle-background {
+    background-color: $background-color-dark;
+  }
+
+  @include for-desktop-down {
+    display: none;
+  }
+
+  color: white;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  position: fixed;
+
+  a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.6em 0;
+    font-size: 0.8em;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
 }
 
 // Hero
 .hero {
-  height: 40vh;
-  margin: 10vh 0 20vh 0;
-  z-index: 1;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 
-  padding: 7em;
+  flex-direction: column;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
+
+  @include for-desktop-up {
+    flex-direction: row;
+    padding: 6em 0;
+  }
+
+  @include for-desktop-down {
+    padding-top: 2em;
+    height: auto;
+    text-align: center;
+  }
 
   img {
-    margin-right: 10em;
+    height: 15em;
+
+    @include for-desktop-down {
+      //max-height: 50vh;
+      max-width: 70vw;
+      justify-content: space-between;
+      margin-right: 0;
+      margin-bottom: 2em;
+    }
+
+    @include for-desktop-up {
+      max-height: 50vh;
+    }
   }
 
   .pop {
     background-color: $yellow;
     color: $black;
-    box-shadow: 15px 15px 0 0 white;
     max-width: 10em;
     align-self: center;
     padding: 1em;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.5;
+    border-radius: 0.2em;
+
+    box-shadow: 0 0 0 15px white;
+
+    margin-bottom: 2em;
+
+    @include for-desktop-up {
+      margin-left: 1em;
+      margin-bottom: 0;
+      box-shadow: 15px 15px 0 0 white;
+      font-size: 1em;
+    }
 
     b {
       font-weight: 700;
@@ -81,25 +156,180 @@ body {
 
 // Main container
 #content-container {
-  z-index: 100;
-  width: 85%;
-  height: 100vh;
-  margin: 0 auto;
-  border-radius: 0.5em 0.5em 0 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 0 3em;
   background-color: $background-color-light;
 
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  @include shadow;
+
+  @include for-desktop-up {
+    margin: -1em 7% 0 7%;
+    border-radius: 0.5em 0.5em 0 0;
+  }
 
   h1 {
-    background-color: $yellow;
+    background-color: black;
+    color: $yellow;
     position: relative;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 0.2em 0.5em;
     text-align: center;
-    font-size: 5em;
+    font-size: 2.5em;
+    display: inline-block;
+    border-radius: 0.2em;
+
+    @include shadow;
+
+    &:not(:first-child) {
+      margin-top: 3em;
+    }
   }
 }
 
+// Team
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  font-size: 0.7em;
+
+  .member {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    max-width: 90%;
+    margin-bottom: 5em;
+
+    img {
+      width: 60em;
+
+      @include for-desktop-down {
+        width: 15em;
+      }
+
+      border-radius: 5px;
+      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    .details {
+      padding: 2em;
+
+      .name {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 0.4em;
+
+        @include for-desktop-down {
+          font-size: 3em;
+        }
+      }
+
+      .role {
+        color: lighten(black, 20%);
+        margin-bottom: 1.2em;
+
+        @include for-desktop-down {
+          font-size: 1.5em;
+        }
+      }
+
+      .bio {
+        font-size: 0.8em;
+        line-height: 1.5;
+
+        @include for-desktop-down {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.process-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include is-landscape {
+    flex-direction: row;
+  }
+
+  .step {
+    flex-direction: column;
+    width: 70%;
+    font-size: 1.2em;
+
+
+    @include is-landscape {
+      width: calc(33% - 2em);
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-top: 0;
+
+      @include is-portrait {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+.wall {
+  display: flex;
+  width: 100%;
+  margin: 2em auto 0 auto;
+
+  .brick {
+    max-width: 10em;
+
+    @include shadow;
+    border-radius: 0.2em
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  a {
+    font-size: 2em;
+    color: black;
+    text-decoration-color: $yellow;
+    letter-spacing: 3px;
+
+    &:hover {
+      color: $yellow;
+      text-decoration-color: black;
+    }
+  }
+}
+
+.rates-container {
+  table {
+    text-align: center;
+    line-height: 2;
+    width: 100%;
+    border-collapse: collapse;
+
+    thead tr {
+      border-bottom: 3px solid $yellow;
+      //background-color: $black;
+      color: black;
+    }
+  }
+}
 
 // Headers
 h1, h2, h3, h4, h5, h6 {

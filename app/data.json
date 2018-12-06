@@ -1,0 +1,61 @@
+{
+  "photos": [
+    {
+      "url": "printer.jpg"
+    },
+    {
+      "url": "test2.jpg"
+    },
+    {
+      "url": "dexter.jpg"
+    },
+    {
+      "url": "lasercutter.jpg"
+    },
+    {
+      "url": "test1.jpg"
+    },
+    {
+      "url": "test3.jpg"
+    },
+    {
+      "url": "recyclebot.jpg"
+    }
+  ],
+  "rates": {
+    "internal": {
+      "filiment": "5¢ / gram",
+      "design": "$10 / hour"
+    },
+    "external": {
+      "filiment": "10¢ / gram",
+      "design": "$25 / hour"
+    }
+  },
+  "team": [
+    {
+      "name": "asdf",
+      "image": "https://picsum.photos/200/200",
+      "role": "Senior Manager",
+      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+    },
+    {
+      "name": "asdf",
+      "image": "https://picsum.photos/200/200",
+      "role": "Senior Manager",
+      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+    },
+    {
+      "name": "asdf",
+      "image": "https://picsum.photos/200/200",
+      "role": "Senior Manager",
+      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+    },
+    {
+      "name": "asdf",
+      "image": "https://picsum.photos/200/200",
+      "role": "Senior Manager",
+      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+    }
+  ]
+}

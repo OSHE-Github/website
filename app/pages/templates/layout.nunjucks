@@ -5,20 +5,19 @@
     <title>Open Source Hardware Enterprise</title>
 
     <link href="css/combined.css" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <nav class="navbar">
-      <a>About</a>
-      <a>About</a>
-      <a>About</a>
-      <a>About</a>
+    <nav id="navbar">
+      <a href="#process">What We Do</a>
+      <a href="#rates">Rates</a>
+      <a href="#members">The Crew</a>
+      <a href="#contact">Contact</a>
+      <a href="#orderform">Order Form</a>
     </nav>
-    <div id="background"></div>
 
     <container id="page-container">
       {% block content %} {% endblock %}
     </container>
-
-    <script type="text/javascript" src="js/combined.js"></script>
   </body>
 </html>
