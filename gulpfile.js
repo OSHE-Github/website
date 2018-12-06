@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const fs = require('fs');
 const del = require('del');
 
 // Flags
@@ -17,11 +18,17 @@ const gulpIf = require('gulp-if');
 const cssnano = require('gulp-cssnano');
 const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 const nunjucksRender = require('gulp-nunjucks-render');
 const htmlmin = require('gulp-htmlmin');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
 const runSequence = require('run-sequence');
+const data = require('gulp-data');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const rename = require('gulp-rename');
 
 // Sass
 gulp.task('sass', () => {
@@ -34,11 +41,17 @@ gulp.task('sass', () => {
 
 // JS
 gulp.task('js', () => {
-  return gulp.src('app/js/**/*.js')
+  const b = browserify({
+    entries: './app/js/main.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('main.js'))
+    .pipe(buffer())
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(concat('combined.js'))
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -46,13 +59,19 @@ gulp.task('js', () => {
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe(newer('dist/images/'))
-    .pipe(imagemin({ optimizationLevel: 5 }))
+    .pipe(imagemin([
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5})
+    ]))
     .pipe(gulp.dest('dist/images/'));
 });
 
 // Nunjucks
 gulp.task('nunjucks', () => {
   return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    .pipe(data(function() {
+      return JSON.parse(fs.readFileSync('./app/data.json'));
+    }))
     // Renders template with nunjucks
     .pipe(nunjucksRender({
       path: ['app/pages/templates']
@@ -116,7 +135,13 @@ gulp.task('serve', () => {
     // Nunjucks
     gulp.watch('app/pages/**/*.nunjucks', ['build:live']);
 
+    // Data file
+    gulp.watch('app/data.json', ['build:live']);
+
     // JS
     gulp.watch('app/js/**/*.js', ['build:live']);
+
+    // Images
+    gulp.watch('app/images/**/*', ['build:live']);
   });
 });
