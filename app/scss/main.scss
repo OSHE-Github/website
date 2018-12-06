@@ -31,28 +31,24 @@ body {
   }
 }
 
+a, .link {
+  color: black;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: $yellow;
+  letter-spacing: 3px;
+
+  &:hover {
+    color: $yellow;
+    text-decoration-color: black;
+  }
+}
+
 #page-container {
   z-index: 0;
   display: flex;
   flex-direction: column;
-}
-
-#background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6),
-    ),
-    url('../images/background.jpg');
-  background-size: cover;
-
-  z-index: 0;
 }
 
 // Navbar
@@ -161,7 +157,7 @@ body {
   flex-direction: column;
   z-index: 1;
   min-height: 100vh;
-  padding: 0 3em;
+  padding: 0 3em 2em 3em;
   background-color: $background-color-light;
 
   @include shadow;
@@ -212,7 +208,7 @@ body {
       }
 
       border-radius: 5px;
-      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+      @include shadow;
     }
 
     .details {
@@ -305,14 +301,7 @@ body {
 
   a {
     font-size: 2em;
-    color: black;
-    text-decoration-color: $yellow;
     letter-spacing: 3px;
-
-    &:hover {
-      color: $yellow;
-      text-decoration-color: black;
-    }
   }
 }
 
@@ -325,9 +314,47 @@ body {
 
     thead tr {
       border-bottom: 3px solid $yellow;
-      //background-color: $black;
       color: black;
     }
+  }
+}
+
+#show-credits {
+  font-size: 1.2em;
+}
+
+#credits-container {
+  display: none;
+
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+
+  #credits {
+    max-height: 70vh;
+    max-width: 70vh;
+    line-height: 1.5;
+    background-color: $background-color-light;
+    border-radius: 0.2em;
+    @include shadow;
+    padding: 2em;
+
+    #madeby {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+body.toggle-credits {
+  #credits-container {
+    display: flex;
   }
 }
 

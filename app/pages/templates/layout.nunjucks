@@ -19,5 +19,21 @@
     <container id="page-container">
       {% block content %} {% endblock %}
     </container>
+
+    <div id="credits-container">
+      <div id="credits">
+        Icons taken from the Noun Project, licenced under Creative Commons:
+        <ul>
+          <li>Shuffle by Dmitry Baranovskiy</li>
+          <li>design by LINECTOR</li>
+          <li>conveyor by Ralf Schmitzer</li>
+        </ul>
+
+
+        <div id="madeby">
+          Made by <a href="https://maxisom.me">Max Isom</a>.
+        </div>
+      </div>
+    </div>
   </body>
 </html>

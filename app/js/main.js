@@ -3,15 +3,15 @@ const Bricks = require('bricks.js')
 // Navbar scroll effect
 window.onscroll = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("navbar").className = "toggle-background";
+    document.getElementById('navbar').className = 'toggle-background';
   } else {
-    document.getElementById("navbar").className = "";
+    document.getElementById('navbar').className = '';
   }
 }
 
-// Bricks
-document.addEventListener("DOMContentLoaded", function() {
-
+// On page ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Bricks
   const bricks = Bricks({
     container: '.wall',
     packed: 'data-packed',
@@ -32,4 +32,13 @@ document.addEventListener("DOMContentLoaded", function() {
   window.onresize = () => {
     bricks.pack();
   }
+
+  // Credits
+  document.getElementById('show-credits').addEventListener('click', event => {
+    document.getElementsByTagName('body')[0].className = 'toggle-credits';
+  });
+
+  document.getElementById('credits-container').addEventListener('click', event => {
+    document.getElementsByTagName('body')[0].className = '';
+  });
 });
