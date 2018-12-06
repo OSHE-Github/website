@@ -23,4 +23,4 @@ This project uses [Gulp](http://gulpjs.com) to run automated tasks for developme
   - Run `gulp build:production`
   - Copy all files from the resulting `dist/` directory to the server.
 
-The distrubtion directory (`dist/`) is ephemeral; do not manually make changes to files contained within it.
+**The distrubtion directory (`dist/`) is ephemeral; do not manually make changes to files contained within it.**
