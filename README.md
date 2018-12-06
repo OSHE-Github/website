@@ -1,62 +1,26 @@
-# Website for Open Source Hardware
+## Development
 
-### Development
+### Setting up your enviroment
+1. Ensure [Node.js](https://nodejs.org/en/) is installed and the version, as reported by `node -v`, is `>= 8.0.0`.
+2. Clone this repository.
+3. Inside the resulting directory, run `npm i` to install dependencies.
+4. See below for details on using Gulp.
 
-This project uses [Gulp](http://gulpjs.com) to run automated tasks for development and production builds.
-The tasks are as follows:
-
-`gulp --production`: Same as `gulp serve --production` also run `gulp test` and  not boot up production server
-
-`gulp serve`: Compiles preprocessors and boots up development server
-`gulp serve --production`: Same as `gulp serve` but will run all production tasks so you can view the site/app in it's final optimized form
-
-## Text
-
-A student organization dedicated to the development and availability of open source hardware.
-
-- Who are we?
-  - We are a Michigan Technological University enterprise specializing in the development and availability of open source hardware.
-- What do we do?
-  - We are a product development firm that offers design and prototyping through the use of open source software and hardware like 3D printers. Being open source means the instructions we use, the 3D models we create, and the software we write are shared to the commons, where they can be modified or redistributed. We charge a reasonably high design rate up front so that we can make a profit, and then everyone after us reaps the benefits of our work for a massive discount if they choose to recreate it. Anyone who so desires can make changes or updates to our parts, and through this process our parts are improved at a much higher rate than would be possible by ourselves. Open source is all about collaboration.
+### Using Gulp
+This project uses [Gulp](http://gulpjs.com) to run automated tasks for development and production builds. The tasks are as follows:
+- `gulp serve`: starts a live-reloading development server for rapidly prototyping
+- `gulp build:production`: builds the website and puts resulting files in the `dist/` directory
+- `gulp build:clean`: deletes the `dist/` directory
 
 
+### Example workflow
+1. Set up your enviroment.
+2. Start the Gulp devleopment server with `gulp serve`.
+3. Make changes to `data.json` (add more photos, change a bio, remove a team member).
+4. Watch changes magically appear in your browser on the fly.
+5. When you're done making changes,
+  - Stop `gulp serve`
+  - Run `gulp build:production`
+  - Copy all files from the resulting `dist/` directory to the server.
 
-  Current Projects
-
-We currently have many cool projects we are pursuing.
-
-    GM Automation Cage (Automated 3D printer with a robotic arm)
-    Recyclebot V5
-    Granulator
-    Lasersaur
-    Low cost insulation
-    Solar
-    High-temperature printing
-
-
-
-    Future
-
-    We believe OSHE has a very bright future. We’ve decided to start building our foundations strong so that we can tackle a wide range of problems, and offer an even wider range of solutions. Current future projects include:
-
-        Building more 3D printers
-        Becoming more involved in Open Source Ecology
-        Hosting workshops on Open Source Ideology
-        Designing/Building a wide range of solutions for customers
-        Building demonstration products for the community
-            Progressive Vision Loss Lenses
-            Robotic Arms Within 3D Printing Process
-            Recylebot v5 Filament Extruder
-            Movable 3D printers
-            Granulator v2
-
-
-            Rates
-            Group Type 	Filament 	Design and Development
-            Internal (University) 	$0.05 per gram 	$10/hr
-            External (Non-university related) 	$0.10 per gram 	$25/hr
-
-
-  Order form
-
-  team roster
+The distrubtion directory (`dist/`) is ephemeral; do not manually make changes to files contained within it.
