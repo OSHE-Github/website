@@ -34,28 +34,28 @@
   },
   "team": [
     {
-      "name": "asdf",
-      "image": "https://picsum.photos/200/200",
-      "role": "Senior Manager",
-      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+      "name": "Matt Lekity",
+      "image": "team/Matt_Lekity.jpg",
+      "major": "Software Engineering",
+      "bio": "Matt is a 3rd year Software Engineering undergraduate with a minor in Electrical Engineering. He currently is working on the Recycle Bot project and is developing an android application to control the Recycle Bot."
     },
     {
-      "name": "asdf",
-      "image": "https://picsum.photos/200/200",
-      "role": "Senior Manager",
-      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+      "name": "Lia Anderson",
+      "image": "team/Lia_Anderson.jpg",
+      "major": "Electrical Engineering",
+      "bio": "3rd year that enjoys crossfit, basketball, legos and design. "
     },
     {
-      "name": "asdf",
-      "image": "https://picsum.photos/200/200",
-      "role": "Senior Manager",
-      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+      "name": "Sean Scsavnicki",
+      "image": "team/Sean_Scsavnicki.jpg",
+      "major": "Mechanical Engineering",
+      "bio": "Sean is interested in CAD design, Mechatronics, 3D printing, and Open Source He is in his third semester at Michigan Technological University studying Mechanical Engineering Currently, Sean is working with the Granulation and Insulation team, as well as making improvements to the way parts can be ordered for the OSHE lab"
     },
     {
-      "name": "asdf",
-      "image": "https://picsum.photos/200/200",
-      "role": "Senior Manager",
-      "bio": "Eric Smith is an Audio Production and Technology major. Eric is skilled in all things audio related, including recording and mixing for both live sound and studio environments, audio repair, foley recording, and audio editing. Eric also has experience with various video and show control equipment due to his time as a Broadcast Engineer for Michigan Tech Athletics and as a Jr. Project Engineer for Smart Monkeys, Inc. After graduation, Eric plans to utilize his knowledge of audio and show control programming through work in the entertainment industry."
+      "name": "Aubrey Woern",
+      "image": "team/Aubrey_Woern.jpg",
+      "major": "Mechanical Engineering",
+      "bio": "Aubrey Woern is going into his 5th year studying Mechanical Engineering with a minor in Manufacturing. He is currently working on his senior design project to create a low cost, high temperature 3D Printer for printing in engineering polymers. Aubrey is also in the MOST research group led by Dr. Joshua Pearce where he is working on recycling polymers, composite filaments and metal sintered 3D printing. "
     }
   ]
 }

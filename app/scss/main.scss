@@ -201,7 +201,8 @@ a, .link {
     margin-bottom: 5em;
 
     img {
-      width: 60em;
+      width: 100em;
+      max-width: 25vw;
 
       @include for-desktop-down {
         width: 15em;
@@ -220,16 +221,16 @@ a, .link {
         margin-bottom: 0.4em;
 
         @include for-desktop-down {
-          font-size: 3em;
+          font-size: 1.5em;
         }
       }
 
-      .role {
+      .major {
         color: lighten(black, 20%);
         margin-bottom: 1.2em;
 
         @include for-desktop-down {
-          font-size: 1.5em;
+          font-size: 1.2em;
         }
       }
 
@@ -337,16 +338,16 @@ a, .link {
   align-items: center;
 
   #credits {
+    overflow: scroll;
     max-height: 70vh;
-    max-width: 70vh;
+    max-width: 70vw;
     line-height: 1.5;
     background-color: $background-color-light;
     border-radius: 0.2em;
-    @include shadow;
     padding: 2em;
+    @include shadow;
 
     #madeby {
-      width: 100%;
       text-align: center;
     }
   }
