@@ -95,6 +95,7 @@ a, .link {
   flex-direction: column;
 
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/background.jpg");
+  background-size: cover;
 
   @include for-desktop-up {
     flex-direction: row;
@@ -202,12 +203,15 @@ a, .link {
     align-items: center;
     margin-bottom: 5em;
 
+    @include is-portrait {
+      font-size: 1.3em;
+    }
+
     img {
       width: 100em;
       max-width: 15vw;
 
       @include for-desktop-down {
-        width: 15em;
         max-width: 25vw;
       }
 
@@ -257,7 +261,7 @@ a, .link {
   margin: auto;
   align-items: center;
 
-  @include is-landscape {
+  @include for-desktop-up {
     flex-direction: row;
   }
 
@@ -267,7 +271,7 @@ a, .link {
     font-size: 1.2em;
 
 
-    @include is-landscape {
+    @include for-desktop-up {
       width: calc(25% - 2em);
 
       &:not(:last-child) {
@@ -275,13 +279,13 @@ a, .link {
       }
     }
 
+    @include for-desktop-down {
+      font-size: 2em;
+    }
+
     p {
       text-align: center;
       margin-top: 0;
-
-      @include is-portrait {
-        font-size: 2em;
-      }
     }
   }
 }
