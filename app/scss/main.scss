@@ -193,19 +193,22 @@ a, .link {
   flex-flow: column;
   font-size: 0.7em;
 
+  width: 65%;
+  margin: auto;
+
   .member {
     display: flex;
     flex-flow: row;
     align-items: center;
-    max-width: 90%;
     margin-bottom: 5em;
 
     img {
       width: 100em;
-      max-width: 25vw;
+      max-width: 15vw;
 
       @include for-desktop-down {
         width: 15em;
+        max-width: 25vw;
       }
 
       border-radius: 5px;
@@ -249,7 +252,9 @@ a, .link {
 .process-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
   align-items: center;
 
   @include is-landscape {
@@ -263,7 +268,7 @@ a, .link {
 
 
     @include is-landscape {
-      width: calc(33% - 2em);
+      width: calc(25% - 2em);
 
       &:not(:last-child) {
         margin-right: 1em;
@@ -310,8 +315,13 @@ a, .link {
   table {
     text-align: center;
     line-height: 2;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     border-collapse: collapse;
+
+    @include for-desktop-down {
+      width: 100%;
+    }
 
     thead tr {
       border-bottom: 3px solid $yellow;
