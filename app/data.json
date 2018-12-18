@@ -25,6 +25,25 @@
   },
   "team": [
     {
+      "name": "Dr. Joshua Pearce",
+      "image": "team/Joshua_Pearce.jpg",
+      "role": "Faculty Advisor"
+    },
+    {
+      "name": "Zach Arnold",
+      "image": "team/Zach_Arnold.jpg",
+      "role": "President",
+      "major": "Electrical and Computer Engineering",
+      "bio": "Zach Arnold is currently a third year Electrical and Computer Engineering student at Tech and upholding a position as the Enterprise president. He is interested in controls, 3D printing and other manufacturing techniques and methods. His previous project was the GM automation cage and currently is working on the Lasersaur and other miscellaneous projects to benefit the team and lab."
+    },
+    {
+      "name": "Sean Scsavnicki",
+      "image": "team/Sean_Scsavnicki.jpg",
+      "role": "Vice President",
+      "major": "Mechanical Engineering",
+      "bio": "Sean is interested in CAD design, Mechatronics, 3D printing, and Open Source He is in his third semester at Michigan Technological University studying Mechanical Engineering Currently, Sean is working with the Granulation and Insulation team, as well as making improvements to the way parts can be ordered for the OSHE lab."
+    },
+    {
       "name": "Lia Anderson",
       "image": "team/Lia_Anderson.jpg",
       "major": "Electrical Engineering",
@@ -37,22 +56,10 @@
       "bio": "Gage is new to 3D printing since he joined the enterprise. With his time here he has learned a lot about the process of how they work. Now he is doing research on the safety of different printers including metal and printers with UV radiation. He is also doing a business analysis of the enterprise."
     },
     {
-      "name": "Zach Arnold",
-      "image": "team/Zach_Arnold.jpg",
-      "major": "Electrical and Computer Engineering",
-      "bio": "Zach Arnold is currently a third year Electrical and Computer Engineering student at Tech and upholding a position as the Enterprise president. He is interested in controls, 3D printing and other manufacturing techniques and methods. His previous project was the GM automation cage and currently is working on the Lasersaur and other miscellaneous projects to benefit the team and lab."
-    },
-    {
       "name": "Matthew Lekity",
       "image": "team/Matt_Lekity.jpg",
       "major": "Software Engineering",
       "bio": "Matt is a 3rd year Software Engineering undergraduate with a minor in Electrical Engineering. He currently is working on the Recycle Bot project and is developing an android application to control the Recycle Bot."
-    },
-    {
-      "name": "Sean Scsavnicki",
-      "image": "team/Sean_Scsavnicki.jpg",
-      "major": "Mechanical Engineering",
-      "bio": "Sean is interested in CAD design, Mechatronics, 3D printing, and Open Source He is in his third semester at Michigan Technological University studying Mechanical Engineering Currently, Sean is working with the Granulation and Insulation team, as well as making improvements to the way parts can be ordered for the OSHE lab."
     },
     {
       "name": "Drew Vincent",

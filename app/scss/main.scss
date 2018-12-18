@@ -74,7 +74,7 @@ a, .link {
   a {
     flex-grow: 1;
     text-align: center;
-    padding: 0.6em 0;
+    padding: 0.8em 0;
     font-size: 0.8em;
     color: white;
     text-decoration: none;
@@ -208,6 +208,7 @@ a, .link {
     }
 
     img {
+      align-self: flex-start;
       width: 100em;
       max-width: 15vw;
 
@@ -220,6 +221,7 @@ a, .link {
     }
 
     .details {
+      height: 100%;
       padding: 2em;
 
       .name {
@@ -232,13 +234,20 @@ a, .link {
         }
       }
 
-      .major {
-        color: lighten(black, 20%);
+      .role, .major {
         margin-bottom: 1.2em;
 
         @include for-desktop-down {
           font-size: 1.2em;
         }
+      }
+
+      .role {
+        font-size: 1.2em;
+      }
+
+      .major {
+        color: lighten(black, 20%);
       }
 
       .bio {
